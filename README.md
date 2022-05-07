@@ -6,6 +6,10 @@ This is an e-commerce B2C web application. Admin will manage the products and st
 
 The Backend side will be created on Node.js with express and data will be stored on PostgreSQL database. JWT will be used for authentication/authorization. Payments will be completed using the Strip APIs. AJAX functionality will be done using the Axios library.
 
+### Database Schema
+
+![Database Diagram](diagram.png)
+
 ### DEVELOPMENT
 
 To install:
