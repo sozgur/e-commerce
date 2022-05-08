@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "firstName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "lastName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "address1": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 150
+    },
+    "address2": {
+      "type": "string",
+      "maxLength": 150
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "zip": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "firstName",
+    "lastName",
+    "address1",
+    "city",
+    "state",
+    "zip",
+    "phone"
+  ]
+}
