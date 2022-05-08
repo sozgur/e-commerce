@@ -2,12 +2,11 @@
 
 const db = require("../db");
 const { NotFoundError } = require("../expressError");
-const { sqlForPartialUpdate } = require("../helpers/sql");
 
 /** Related functions for addresses. */
 
 class Address {
-    /** create a address (from data) return new company data.
+    /** create a address (from data) return new address data.
      *
      * Returns { id, title, firstName, lastName, address1, address2, city,
      *   state, zip, phone}
@@ -25,7 +24,7 @@ class Address {
         phone,
     }) {
         const result = await db.query(
-            `INSERT INTO address
+            `INSERT INTO addresses
            (title,
             first_name,
             last_name,
@@ -64,7 +63,8 @@ class Address {
         const result = await db.query(
             ` SELECT title, first_name AS "firstName", last_name AS "lastName", address1, address2, city, state, zip, phone
               FROM addresses
-              WHERE id = $1`
+              WHERE id = $1`,
+            [id]
         );
 
         const address = result.rows[0];
