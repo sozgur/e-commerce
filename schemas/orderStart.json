@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/userAuth.json",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "integer"
+    },
+    "shipping_address_id": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["user_id", "shipping_address_id"]
+}

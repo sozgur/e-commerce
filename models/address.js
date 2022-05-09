@@ -94,6 +94,6 @@ class Address {
         );
         const address = result.rows[0];
 
-        if (!address) throw new NotFoundError(`No user: ${address}`);
+        if (!address) throw new NotFoundError(`No address: ${address}`);
     }
 }

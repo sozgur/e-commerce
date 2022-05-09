@@ -31,7 +31,7 @@ CREATE TABLE user_addresses (
   PRIMARY KEY (user_id, address_id)
 );
 
-CREATE TYPE order_status AS ENUM ('paid','shipped','delivered');
+CREATE TYPE order_status AS ENUM ('start','cancel','paid','shipped','delivered');
 CREATE TABLE orders (
   id SERIAL PRIMARY KEY,
   user_id INTEGER

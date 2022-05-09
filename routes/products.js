@@ -29,7 +29,7 @@ router.post("/", ensureAdmin, async function (req, res, next) {
       throw new BadRequestError(errs);
     }
 
-    const product = await Prooduct.create(req.body);
+    const product = await Product.create(req.body);
     return res.status(201).json({ product });
   } catch (err) {
     return next(err);

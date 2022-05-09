@@ -111,6 +111,6 @@ class Product {
         );
         const product = result.rows[0];
 
-        if (!product) throw new NotFoundError(`No user: ${product}`);
+        if (!product) throw new NotFoundError(`No product: ${product}`);
     }
 }
